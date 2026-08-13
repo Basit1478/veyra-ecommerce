@@ -1,0 +1,6 @@
+@media (max-width:700px) {
+  .shop-grid .product-card:nth-child(3n+1) { grid-column:auto; }
+  .shop-grid .product-card:nth-child(3n+1) .product-image { aspect-ratio:4/5; }
+  .shop-grid .product-card:nth-child(5n+1) { grid-column:1 / -1; }
+  .shop-grid .product-card:nth-child(5n+1) .product-image { aspect-ratio:4/4.4; }
+}

@@ -1,0 +1,140 @@
+/* VEYRA bespoke brand signature */
+.logo.veyra-signature {
+  --logo-ease: cubic-bezier(.23, 1, .32, 1);
+  gap: .72rem !important;
+  min-width: max-content;
+  transform-origin: center;
+}
+
+.veyra-seal {
+  width: 35px !important;
+  height: 39px !important;
+  overflow: visible;
+  fill: none !important;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 320ms var(--logo-ease), opacity 220ms ease;
+}
+
+.veyra-seal .seal-ring {
+  stroke-width: .72;
+  opacity: .72;
+}
+
+.veyra-seal .seal-v {
+  stroke-width: 1.55;
+}
+
+.veyra-seal .seal-a {
+  stroke-width: .78;
+  opacity: .9;
+}
+
+.veyra-seal .seal-crown {
+  stroke-width: .68;
+  opacity: .68;
+}
+
+.veyra-seal .seal-point {
+  fill: currentColor !important;
+  stroke: none;
+  opacity: .78;
+}
+
+.veyra-wordmark {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: .22rem;
+  line-height: 1;
+}
+
+.veyra-wordmark b {
+  font-family: var(--font-display), serif;
+  font-size: .94rem;
+  font-weight: 500;
+  letter-spacing: .255em;
+  line-height: .9;
+}
+
+.veyra-wordmark i {
+  display: block;
+  margin: 0 !important;
+  padding-left: .02em;
+  font-family: var(--font-sans), sans-serif;
+  font-size: .39rem !important;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: .58em !important;
+  line-height: 1;
+  opacity: .72;
+}
+
+.site-header.navbar-system > .logo.veyra-signature {
+  left: 50% !important;
+  right: auto !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.site-header.navbar-system .veyra-signature .season-mark {
+  top: calc(100% + .08rem) !important;
+  font-size: .34rem;
+  letter-spacing: .23em;
+  opacity: .64;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .veyra-signature:hover .veyra-seal {
+    transform: translateY(-1px);
+  }
+
+  .veyra-signature:hover .seal-ring {
+    opacity: 1;
+  }
+}
+
+.veyra-signature:active .veyra-seal {
+  transform: scale(.97);
+  transition-duration: 120ms;
+}
+
+@media (max-width: 900px) {
+  .logo.veyra-signature {
+    gap: .58rem !important;
+  }
+
+  .veyra-seal {
+    width: 32px !important;
+    height: 36px !important;
+  }
+
+  .veyra-wordmark b {
+    font-size: .82rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header.navbar-system > .logo.veyra-signature {
+    width: 44px;
+    min-width: 44px;
+    justify-content: center;
+  }
+
+  .site-header.navbar-system .veyra-wordmark,
+  .site-header.navbar-system .veyra-signature .season-mark {
+    display: none !important;
+  }
+
+  .site-header.navbar-system .veyra-seal {
+    width: 30px !important;
+    height: 34px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .veyra-seal {
+    transition: opacity 160ms ease;
+  }
+}

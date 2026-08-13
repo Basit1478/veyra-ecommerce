@@ -1,0 +1,42 @@
+/* VEYRA Azadi Edition — restrained 14 August palette */
+:root{
+  --ink:#073b2d;
+  --bone:#f5f1e7;
+  --paper:#e5ece5;
+  --wine:#0b6849;
+  --muted:#68756c;
+  --line:rgba(7,59,45,.18);
+  --azadi:#0a6b4b;
+  --azadi-deep:#052d24;
+  --azadi-light:#f7f4eb;
+}
+body{background:var(--bone);color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline-color:#16966d}
+.season-mark{position:absolute;left:50%;top:calc(100% + .15rem);transform:translateX(-50%);width:max-content;color:currentColor;font:500 .42rem/1 var(--font-sans),sans-serif;letter-spacing:.25em;opacity:.78}
+.site-header>.logo{padding-bottom:.6rem}
+.button.dark,.footer,.cart-drawer .button.dark{background:var(--azadi-deep);color:var(--azadi-light)}
+.button.dark:hover{background:#0b503d}.add-button::before{background:var(--azadi)}.add-button.added{background:var(--azadi-deep)}
+.product-info button.is-added{background:var(--azadi);color:var(--azadi-light)}
+.pdp-object-note{background:var(--azadi-deep)}
+.edition-marquee{background:var(--azadi-deep)!important;color:var(--azadi-light)!important}
+.heirloom-copy,.quote{background-color:var(--azadi-deep);color:var(--azadi-light)}
+.service-strip>div::before{background:var(--azadi)}
+.filter-row button.active{color:var(--azadi)}
+.swatches button.active{outline-color:var(--azadi-deep)}
+.cart-scrim,.search-scrim{background:rgba(3,35,27,.32)}
+.cart-drawer,.search-panel{background:rgba(245,241,231,.97)}
+
+/* A quiet crescent, revealed only in the opening film */
+.overture::after{content:"";position:absolute;z-index:5;right:clamp(1.2rem,4vw,4rem);top:50%;width:clamp(34px,4vw,58px);aspect-ratio:1;border-radius:50%;background:rgba(247,244,235,.94);transform:translateY(-50%);-webkit-mask:radial-gradient(circle at 68% 40%,transparent 0 42%,#000 43%);mask:radial-gradient(circle at 68% 40%,transparent 0 42%,#000 43%);opacity:.8;pointer-events:none}
+.overture-top::after{content:"✦";margin-left:auto;color:#fff;font-size:.75rem;opacity:.78}
+.overture-top,.overture-bottom{border-color:rgba(255,255,255,.28)}
+.overture-meter i{background:#fff}
+.flagship-copy::before{content:"14 AUGUST · A QUIET TRIBUTE TO PAKISTAN";display:block;margin-bottom:1rem;color:var(--azadi);font-size:.55rem;font-weight:600;letter-spacing:.2em}
+.flagship-word{color:var(--azadi-deep)}
+.flagship-rail span,.house-index span:first-child,.section-head>div>span,.campaign-copy>span,.craft-copy>span,.heirloom-copy>span{color:var(--azadi)}
+.text-link{border-color:color-mix(in srgb,currentColor 45%,transparent)}
+.pdp-gallery figcaption{background:rgba(5,45,36,.64);padding:.5rem .65rem;text-shadow:none;backdrop-filter:blur(10px)}
+.pdp-note em,.section-head em,.flagship-copy em,.statement em{color:var(--azadi)}
+
+@media(max-width:600px){.season-mark{font-size:.37rem;letter-spacing:.19em;top:calc(100% - .1rem)}.site-header>.logo{padding-bottom:.35rem}.overture::after{right:1.2rem;top:47%;opacity:.72}.overture-center{display:none}.flagship-copy::before{max-width:18rem;line-height:1.6}}
+@media(prefers-reduced-transparency:reduce){.pdp-gallery figcaption{background:var(--azadi-deep);backdrop-filter:none}}

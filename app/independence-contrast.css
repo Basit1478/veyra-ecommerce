@@ -1,0 +1,44 @@
+/* Strong Pakistan green + white campaign contrast */
+:root{
+  --ink:#01411c;
+  --bone:#fffdf8;
+  --paper:#edf6f0;
+  --wine:#006a3d;
+  --muted:#587064;
+  --line:rgba(1,65,28,.18);
+  --azadi:#006b3c;
+  --azadi-deep:#01411c;
+  --azadi-light:#fff;
+}
+body,.flagship,.statement,.craft-split,.product-page,.checkout-page,.story-page{background:#fffdf8}
+.new-arrivals,.pdp-note,.related-products,.service-strip,.collection-title{background:#edf6f0}
+.house-index,.edition-marquee,.quote,.heirloom-copy,.campaign-copy,.pdp-object-note,.footer{background:#01411c!important;color:#fff!important}
+.house-index span,.campaign-copy>span,.campaign-copy p,.heirloom-copy p,.quote p,.footer small,.footer p{color:rgba(255,255,255,.72)!important}
+.flagship-copy::before,.flagship-rail span,.section-head>div>span,.craft-copy>span,.pdp-info>p,.collection-title>span{color:#006b3c!important}
+.flagship-word{color:#01411c!important}.flagship-copy em,.statement em,.section-head em,.pdp-note em{color:#006b3c!important}
+.button.dark,.place-order,.cart-total .button{background:#01411c!important;color:#fff!important}.button.dark:hover{background:#006b3c!important}
+.add-button::before{background:#00854a!important}.add-button.added{background:#01411c!important}
+.cart-drawer,.search-panel,.order-summary{background:#fff!important;color:#01411c}.cart-scrim,.search-scrim{background:rgba(1,65,28,.32)!important}
+.filter-row button.active{background:#01411c;color:#fff!important;border-color:#01411c}.filter-row button.active span{color:rgba(255,255,255,.75)}
+.pdp-gallery{background:#01411c}.pdp-gallery figcaption{background:rgba(1,65,28,.8)!important;color:#fff}.motion-accordion,.pdp-description,.cart-line,.cart-total,.checkout-form fieldset{border-color:rgba(1,65,28,.2)!important}
+.product-card,.pdp-info,.checkout-form,.shop-page{background:#fffdf8}
+
+/* Campaign imagery receives a controlled green color wash; products and skin stay readable. */
+.overture-shade{background:linear-gradient(110deg,rgba(1,65,28,.58),rgba(1,65,28,.08) 58%,rgba(0,40,20,.32))!important;mix-blend-mode:multiply}
+.flagship-image,.campaign-watch,.campaign-step,.category-banner,.story-photo,.craft-image{position:relative;isolation:isolate}
+.flagship-image::before,.campaign-watch::before,.campaign-step::before,.category-banner::before,.story-photo::before,.craft-image::before{content:"";position:absolute;z-index:1;inset:0;background:rgba(0,107,60,.13);mix-blend-mode:color;pointer-events:none}
+.flagship-image>div,.campaign-watch figcaption,.campaign-step figcaption,.category-banner>div,.category-banner>aside,.craft-image>span{position:absolute;z-index:2}
+.category-banner::after{background:linear-gradient(90deg,rgba(1,65,28,.68),rgba(1,65,28,.04))!important}
+.overture::after{background:#fff!important;opacity:.96}.overture-top::after{color:#fff;opacity:1}
+.season-mark{color:currentColor;opacity:.92}
+
+@media(max-width:900px){.site-header .main-nav{background:#01411c!important;color:#fff!important}.site-header.menu-open{background:#01411c;color:#fff}.main-nav::before,.main-nav::after{color:rgba(255,255,255,.68)}}
+@media(prefers-contrast:more){:root{--muted:#294d3c;--line:rgba(1,65,28,.42)}.button.dark{border:1px solid #fff}}
+
+/* Harmonize the four legacy small-form images with the verified Azadi campaign. */
+.product-image-morrow-slide img,.product-image-folio-wallet img,.product-image-arc-cardholder img,.product-image-memoir-case img{filter:sepia(.12) saturate(.72) hue-rotate(78deg) contrast(1.04)}
+
+
+/* Opening film: remove the decorative crescent at the client's request. */
+.overture::after{content:none!important;display:none!important}
+

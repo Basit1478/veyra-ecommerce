@@ -1,0 +1,54 @@
+/* Final performance and interaction tuning. */
+.product-image img {
+  transition-duration: 280ms !important;
+  will-change: auto;
+}
+
+.cart-drawer {
+  transition-duration: 300ms !important;
+}
+
+.cart-scrim,
+.search-scrim {
+  transition: opacity 220ms ease, backdrop-filter 260ms var(--award-ease), visibility 220ms !important;
+}
+
+.site-header.navbar-system .main-nav {
+  transition-duration: 300ms, 180ms, 300ms !important;
+}
+
+.logo.veyra-signature .veyra-seal {
+  transition-duration: 240ms, 180ms;
+}
+
+.product-image,
+.flagship-image,
+.craft-image,
+.heirloom-image,
+.category-banner,
+.story-photo,
+.campaign-watch,
+.campaign-step {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
+@media (max-width: 600px) {
+  .product-image,
+  .flagship-image,
+  .craft-image,
+  .heirloom-image,
+  .category-banner {
+    contain-intrinsic-size: auto 620px;
+  }
+}
+
+@media (prefers-reduced-data: reduce) {
+  .product-image img {
+    transition: none !important;
+  }
+
+  .edition-marquee span:nth-child(2) {
+    display: none;
+  }
+}

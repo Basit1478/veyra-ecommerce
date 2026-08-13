@@ -1,0 +1,59 @@
+/* Purpose-built crops for the approved VEYRA campaign photography. */
+.flagship-image img {
+  object-position: 60% center !important;
+}
+
+.craft-image img {
+  object-position: center !important;
+}
+
+.heirloom-image img {
+  object-position: center !important;
+}
+
+.category-banner.small-forms-editorial {
+  background: #e8dece;
+  color: #123524;
+}
+
+.category-banner.small-forms-editorial img {
+  left: auto !important;
+  right: 0 !important;
+  width: 58% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.category-banner.small-forms-editorial::after {
+  background: linear-gradient(90deg, #e8dece 0%, #e8dece 39%, rgba(232, 222, 206, .86) 48%, transparent 68%) !important;
+}
+
+.category-banner.small-forms-editorial > div,
+.category-banner.small-forms-editorial > aside {
+  color: #123524;
+}
+
+.category-banner.small-forms-editorial .button.pale {
+  background: #01411c;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .flagship-image img {
+    object-position: 66% center !important;
+  }
+
+  .category-banner.small-forms-editorial img {
+    inset: 0 !important;
+    width: 100% !important;
+    object-position: center !important;
+  }
+
+  .category-banner.small-forms-editorial::after {
+    background: linear-gradient(0deg, rgba(1, 35, 20, .74), rgba(1, 35, 20, .06) 66%) !important;
+  }
+
+  .category-banner.small-forms-editorial > div {
+    color: #fff;
+  }
+}

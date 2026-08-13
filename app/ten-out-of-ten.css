@@ -1,0 +1,234 @@
+/* Final Awwwards-level refinement pass. */
+:root {
+  --chrome-height: 88px;
+  --chrome-height-mobile: 76px;
+  --focus-gold: #caa43d;
+}
+
+::selection {
+  background: #01411c;
+  color: #fffdf8;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.filter-row {
+  top: var(--chrome-height) !important;
+  z-index: 35 !important;
+  scroll-padding-inline: 4vw;
+}
+
+.filter-row::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2.5rem;
+  background: linear-gradient(90deg, transparent, rgba(237, 246, 240, .96));
+  pointer-events: none;
+  opacity: 0;
+}
+
+.filter-note {
+  margin-top: 1.75rem !important;
+  color: rgba(21, 50, 36, .64) !important;
+}
+
+.filter-note span {
+  color: #01411c;
+  font-weight: 700;
+}
+
+.product-card {
+  min-width: 0;
+}
+
+.product-image {
+  isolation: isolate;
+}
+
+.product-image::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0);
+  pointer-events: none;
+  transition: border-color 240ms ease;
+}
+
+.product-info {
+  gap: 1rem;
+}
+
+.product-info > a {
+  min-width: 0;
+}
+
+.product-info > a h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-info > div > span {
+  padding-top: .4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.product-info button {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.text-link,
+.button,
+.product-info button,
+.filter-row button,
+.bag-trigger,
+.menu-button {
+  touch-action: manipulation;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover .product-image::after {
+    border-color: rgba(255, 255, 255, .45);
+  }
+
+  .product-info button:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 900px) {
+  .filter-row {
+    top: var(--chrome-height-mobile) !important;
+    padding-inline: 1rem !important;
+    scroll-padding-inline: 1rem;
+  }
+
+  .filter-row::after {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .collection-title {
+    min-height: 74svh !important;
+    padding-top: 7.25rem !important;
+    padding-bottom: 17rem !important;
+  }
+
+  .collection-title h1 {
+    max-width: 8ch;
+    margin: 1.55rem 0 !important;
+    font-size: clamp(3.45rem, 15vw, 4.1rem) !important;
+    line-height: .84 !important;
+  }
+
+  .collection-title > p {
+    max-width: 21rem;
+    margin: 0;
+  }
+
+  .collection-portrait {
+    right: 1rem !important;
+    width: min(48vw, 190px) !important;
+    height: 39% !important;
+  }
+
+  .filter-row {
+    padding-block: .8rem !important;
+  }
+
+  .filter-row button {
+    min-height: 42px !important;
+    padding: .58rem .72rem .58rem .9rem !important;
+    gap: .58rem !important;
+    font-size: .72rem;
+  }
+
+  .filter-row button span {
+    min-width: 1.4rem !important;
+    height: 1.4rem !important;
+    padding-inline: .28rem !important;
+  }
+
+  .filter-note {
+    margin: 1.35rem 1rem 0 !important;
+  }
+
+  .shop-grid {
+    padding: 1.75rem 1rem 6rem !important;
+    gap: 3.25rem .85rem !important;
+  }
+
+  .shop-grid .product-card:nth-child(3n + 1) .product-image {
+    aspect-ratio: 4 / 4.65;
+  }
+
+  .shop-grid .product-info {
+    padding-top: .85rem;
+  }
+
+  .shop-grid .product-info > a h3 {
+    font-size: clamp(.95rem, 4vw, 1.1rem);
+    white-space: nowrap;
+  }
+
+  .shop-grid .product-info p {
+    max-width: 16ch;
+    margin-top: .1rem;
+    line-height: 1.35;
+  }
+
+  .shop-grid .product-info > div {
+    align-items: center;
+    margin-top: .65rem;
+  }
+
+  .shop-grid .product-info button {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 370px) {
+  .shop-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3.5rem !important;
+  }
+
+  .shop-grid .product-card {
+    grid-column: auto !important;
+  }
+
+  .shop-grid .product-image {
+    aspect-ratio: 4 / 5 !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .site-header.navbar-system,
+  .filter-row {
+    background: #fffdf8 !important;
+    border-color: #01411c !important;
+  }
+
+  .filter-row button {
+    border-color: #01411c !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-image::after,
+  .product-info button {
+    transition: none !important;
+  }
+}
