@@ -16,7 +16,6 @@ export function Header() {
   const [menu, setMenu] = useState(false), [search, setSearch] = useState(false), [query, setQuery] = useState(""), [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLElement>(null), searchRef = useRef<HTMLElement>(null);
   const closeMenu = useCallback(() => setMenu(false), []), closeSearch = useCallback(() => setSearch(false), []);
-  const openMobileSearch = useCallback(() => { setMenu(false); setSearch(true); }, []);
   useDialogFocus(menu, menuRef, closeMenu); useDialogFocus(search, searchRef, closeSearch);
   useEffect(() => { const update = () => setScrolled(window.scrollY > 28); update(); window.addEventListener("scroll", update, { passive: true }); return () => window.removeEventListener("scroll", update); }, []);
   const cart = useCart();
@@ -27,7 +26,6 @@ export function Header() {
       <button className="menu-button" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="main-menu" aria-label={menu ? "Close menu" : "Open menu"}><span /><span /></button>
       <nav ref={menuRef} id="main-menu" className={`main-nav ${menu ? "is-open" : ""}`} aria-label="Main navigation" aria-hidden={!menu} role={menu ? "dialog" : undefined} aria-modal={menu || undefined}>
         {nav.map(([label, href]) => <Link href={href} onClick={closeMenu} key={label}>{label}</Link>)}
-        <button className="mobile-search-trigger" type="button" onClick={openMobileSearch}><span>Search the collection</span><i aria-hidden="true">⌕</i></button>
       </nav>
       <Logo />
       <div className="header-actions"><button className="search-link" onClick={() => setSearch(true)}>Search</button><button className="bag-trigger" onClick={() => cart.setOpen(true)}>Bag <span>({cart.count})</span></button></div>
