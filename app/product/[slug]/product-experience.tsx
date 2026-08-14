@@ -7,8 +7,6 @@ import type { Product } from "../../data";
 import { money } from "../../data";
 import { ProductActions } from "./product-actions";
 
-const detailFor = (category: Product["category"]) => category === "Watches" ? "/images/detail-watch.png" : category === "Footwear" ? "/images/detail-footwear.png" : "/images/detail-leather.png";
-
 export function ProductExperience({ product, objectNumber }: { product: Product; objectNumber: string }) {
   const galleryRef = useRef<HTMLDivElement>(null);
   const reduceMotion = useReducedMotion();
@@ -33,9 +31,9 @@ export function ProductExperience({ product, objectNumber }: { product: Product;
         </motion.div>
         <figcaption className="tracking-[0.18em]">Azadi Edition / Made in 64 pieces</figcaption>
       </figure>
-      <figure className="pdp-detail-image">
+      <figure className={`pdp-detail-image product-image-${product.slug}`}>
         <motion.div className="absolute inset-0 will-change-transform" style={{ transform: reduceMotion ? "none" : detailTransform }}>
-          <Image src={detailFor(product.category)} alt={`The hand-finished materials and craft behind ${product.name}`} fill sizes="(max-width: 900px) 100vw, 31vw" />
+          <Image src={product.image} alt={`Close-up view of ${product.name} in ${product.tone}`} fill sizes="(max-width: 900px) 100vw, 31vw" />
         </motion.div>
         <figcaption className="tracking-[0.18em]">Made slowly / Finished by hand</figcaption>
       </figure>

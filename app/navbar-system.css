@@ -12,3 +12,44 @@
 @media(max-width:600px){.site-header.navbar-system .logo span{display:none}.site-header.navbar-system .season-mark{display:block;font-size:.36rem;letter-spacing:.16em}.site-header.navbar-system .bag-trigger span{display:inline}.site-header.navbar-system .main-nav{padding-top:25vh!important}}
 @media(prefers-reduced-transparency:reduce){.site-header.navbar-system{background:#fffdf8;backdrop-filter:none}.site-header.navbar-system.is-transparent{background:rgba(1,65,28,.92)}}
 @media(prefers-reduced-motion:reduce){.site-header.navbar-system,.site-header.navbar-system .main-nav{transition:opacity 160ms ease,visibility 160ms!important}.site-header.navbar-system .main-nav{transform:none!important}.site-header.navbar-system .main-nav.is-open{transform:none!important}}
+
+/* Compact floating navigation shell — keeps editorial portraits unobstructed. */
+.site-header.navbar-system,
+.site-header.navbar-system.is-transparent {
+  top: 12px !important;
+  right: 0 !important;
+  left: 0 !important;
+  width: min(1180px, calc(100% - 24px)) !important;
+  height: 64px !important;
+  margin-inline: auto !important;
+  padding-inline: 1.1rem !important;
+  border: 1px solid rgba(1,65,28,.13) !important;
+  border-radius: 999px !important;
+  background: rgba(255,253,248,.86) !important;
+  color: #01411c !important;
+  box-shadow: 0 10px 34px rgba(11,35,22,.08) !important;
+  backdrop-filter: blur(18px) saturate(135%) !important;
+}
+
+.site-header.navbar-system .main-nav,
+.site-header.navbar-system .header-actions { gap: clamp(.85rem, 1.45vw, 1.6rem); font-size: .58rem; }
+.site-header.navbar-system > .logo { min-height: 42px; }
+.site-header.navbar-system .season-mark { display: none !important; }
+
+@media (max-width: 900px) {
+  .site-header.navbar-system,
+  .site-header.navbar-system.is-transparent {
+    top: 8px !important;
+    width: calc(100% - 16px) !important;
+    height: 56px !important;
+    padding-inline: .7rem !important;
+  }
+
+  .site-header.navbar-system .menu-button,
+  .site-header.navbar-system .bag-trigger { min-height: 40px !important; height: 40px !important; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .site-header.navbar-system,
+  .site-header.navbar-system.is-transparent { background: #fffdf8 !important; backdrop-filter: none !important; }
+}

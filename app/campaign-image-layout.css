@@ -1,6 +1,6 @@
 /* Purpose-built crops for the approved VEYRA campaign photography. */
 .flagship-image img {
-  object-position: 60% center !important;
+  object-position: 72% center !important;
 }
 
 .craft-image img {
@@ -40,7 +40,7 @@
 
 @media (max-width: 800px) {
   .flagship-image img {
-    object-position: 66% center !important;
+    object-position: 76% center !important;
   }
 
   .category-banner.small-forms-editorial img {
